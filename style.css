@@ -94,3 +94,28 @@ button:hover{
     font-size:14px;
     color:#555;
 }
+
+
+
+/* Mobile devices */
+@media (max-width: 576px) {
+
+.login-card {
+    width: 80%;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.logo {
+    width: 60px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 92%;
+}
+
+}
