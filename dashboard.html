@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Issues Tracker</title>
+</head>
+<body>
+      
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="assets/github-logo.png">
+            <h2>GitHub Issues Tracker</h2>
+        </div>
+
+        <div class="nav-right">
+
+            <input id="searchText" placeholder="Search issues...">
+
+            <button class="search-btn" onclick="searchIssue()">
+                Search
+            </button>
+
+            <button class="new-btn">
+                + New Issue
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <div class="tabs">
+
+        <button class="active" onclick="loadIssues(this)">
+            All
+        </button>
+
+        <button onclick="filterIssues('open', this)">
+            Open
+        </button>
+
+        <button onclick="filterIssues('closed', this)">
+            Closed
+        </button>
+
+    </div>
+
+
+    <div class="issue-header">
+
+        <div class="issue-left">
+
+            <img src="assets/Aperture.png" class="issue-icon">
+
+            <div>
+                <h3 id="issueCount">0 Issues</h3>
+                <p>Track and manage your project issues</p>
+            </div>
+
+        </div>
+
+        <div class="status">
+
+            <span class="open-dot"></span>
+            Open
+
+            <span class="closed-dot"></span>
+            Closed
+
+        </div>
+
+    </div>
+</body>
+</html>
