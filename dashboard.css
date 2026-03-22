@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f6f8;
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 35px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-right input {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.search-btn {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.new-btn {
+    background: #6c3cff;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Tabs */
+
+.tabs {
+    margin: 30px auto;
+    width: 80%;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    gap: 10px;
+}
+
+.tabs button {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.tabs .active {
+    background: #6c3cff;
+    color: white;
+}
+
+/* Header */
+
+.issue-header {
+    width: 80%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.issue-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.issue-icon {
+    width: 40px;
+}
+
+.status {
+    font-size: 14px;
+}
+
+.open-dot {
+    height: 10px;
+    width: 10px;
+    background: green;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.closed-dot {
+    height: 10px;
+    width: 10px;
+    background: purple;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+}
