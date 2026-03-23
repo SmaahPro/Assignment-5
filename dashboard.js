@@ -16,6 +16,8 @@ function setActiveTab(btn){
     btn.classList.add("active");
 }
 
+
+
 async function loadIssues(btn){
 
     setActiveTab(btn);
@@ -267,3 +269,91 @@ function filterIssues(status,btn){
     },300);
 
 }
+
+
+
+function searchIssue(){
+
+    document
+        .getElementById("loader")
+        .style.display = "flex";
+
+
+    const text =
+        document
+            .getElementById("searchText")
+            .value
+            .trim()
+            .toLowerCase();
+
+
+    let baseData = allIssues;
+
+
+
+    if(currentTab === "open"){
+
+        baseData =
+            allIssues.filter(issue =>
+                issue.status === "open"
+            );
+
+    }
+    else if(currentTab === "closed"){
+
+        baseData =
+            allIssues.filter(issue =>
+                issue.status === "closed"
+            );
+
+    }
+
+
+
+    if(text === ""){
+
+        displayIssues(baseData);
+
+        document
+            .getElementById("loader")
+            .style.display = "none";
+
+        return;
+
+    }
+
+
+
+    const filtered =
+        baseData.filter(issue =>
+
+            issue.title
+                .toLowerCase()
+                .includes(text)
+
+        );
+
+
+
+    displayIssues(filtered);
+
+
+    document
+        .getElementById("loader")
+        .style.display = "none";
+
+}
+
+
+
+document
+    .getElementById("searchText")
+    .addEventListener("keyup",(e)=>{
+
+        if(e.key === "Enter"){
+
+            searchIssue();
+
+        }
+
+});
