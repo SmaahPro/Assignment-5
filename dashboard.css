@@ -355,3 +355,61 @@ body {
     background: rgb(194,197,194);
     color: white;
 }
+
+
+/* Medium devices (tablets) */
+@media (max-width: 768px) {
+
+.navbar {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.nav-right {
+    width: 100%;
+}
+
+.nav-right input {
+    width: 100%;
+}
+
+.issues-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.tabs {
+    width: 95%;
+}
+
+.issue-header {
+    width: 95%;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+}
+
+/* Mobile devices */
+@media (max-width: 576px) {
+
+.issues-grid {
+    grid-template-columns: 1fr;
+}
+
+.nav-right {
+    flex-direction: column;
+    width: 100%;
+}
+
+.search-btn,
+.new-btn {
+    width: 100%;
+}
+
+.modal-content {
+    width: 90%;
+}
+
+}
