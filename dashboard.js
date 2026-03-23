@@ -357,3 +357,149 @@ document
         }
 
 });
+
+
+
+function openModal(issue){
+
+    const modal =
+        document.getElementById("issueModal");
+
+
+    modal.style.display = "flex";
+
+
+
+    document
+        .getElementById("modalTitle")
+        .innerText = issue.title;
+
+
+    document
+        .getElementById("modalDescription")
+        .innerText = issue.description;
+
+
+    document
+        .getElementById("modalAuthor")
+        .innerText = issue.author;
+
+
+    document
+        .getElementById("modalDate")
+        .innerText =
+            issue.createdAt.split("T")[0];
+
+
+
+    document
+        .getElementById("modalAssignee")
+        .innerText =
+            issue.assignee ?
+            issue.assignee :
+            "Unassigned";
+
+
+
+    const status =
+        document.getElementById("modalStatus");
+
+
+    status.innerText = issue.status;
+
+
+
+    if(issue.status === "open"){
+
+        status.className =
+            "status open-status";
+
+    }
+    else{
+
+        status.className =
+            "status closed-status";
+
+    }
+
+
+
+    const priority =
+        document.getElementById("modalPriority");
+
+
+    priority.innerText =
+        issue.priority;
+
+
+    priority.className =
+        "priority " +
+        issue.priority.toLowerCase();
+
+
+
+    const labels =
+        document.getElementById("modalLabels");
+
+
+    labels.innerHTML = "";
+
+
+
+    if(issue.labels){
+
+        issue.labels.forEach(label => {
+
+            labels.innerHTML +=
+
+                `<span class="label">${label}</span>`;
+
+        });
+
+    }
+    else if(issue.label){
+
+        labels.innerHTML =
+
+            `<span class="label">${issue.label}</span>`;
+
+    }
+
+}
+
+
+
+const modal =
+    document.getElementById("issueModal");
+
+
+
+document
+    .querySelector(".close-btn")
+    .addEventListener("click",()=>{
+
+        modal.style.display = "none";
+
+});
+
+
+
+document
+    .querySelector(".close-x")
+    .addEventListener("click",()=>{
+
+        modal.style.display = "none";
+
+});
+
+
+
+window.addEventListener("click",(e)=>{
+
+    if(e.target === modal){
+
+        modal.style.display = "none";
+
+    }
+
+});
