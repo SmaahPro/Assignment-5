@@ -62,19 +62,6 @@ function displayIssues(issues){
     container.innerHTML = "";
 
 
-    const openCount =
-        allIssues.filter(issue =>
-            issue.status === "open"
-        ).length;
-
-
-    const closedCount =
-        allIssues.filter(issue =>
-            issue.status === "closed"
-        ).length;
-
-
-
     if(currentTab === "all"){
 
         count.innerText =

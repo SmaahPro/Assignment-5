@@ -43,7 +43,7 @@ Arrow: (a) => a + 10;
 
 5. Template Literals
 
-Template literals use backticks ( ) and${}` to insert variables easily.
+Template literals use backticks (`) and ${} to insert variables easily.
 
 Old way: "Hello " + name
 
